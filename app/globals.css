@@ -1230,3 +1230,55 @@ h2 {
 
   .hero-actions .text-link {
     display: inline-flex;
+/* Why Choose Us section */
+#why-us .trust-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+#why-us .trust-grid > div {
+  align-items: flex-start;
+  padding: 16px;
+  border-right: 1px solid var(--line);
+}
+
+#why-us .trust-grid > div:last-child {
+  border-right: 0;
+}
+
+#why-us .trust-grid p {
+  min-width: 0;
+  gap: 8px;
+}
+
+#why-us .trust-grid small {
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  #why-us .trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #why-us .trust-grid > div:nth-child(2) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  #why-us .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  #why-us .trust-grid > div,
+  #why-us .trust-grid > div:nth-child(2) {
+    padding: 18px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  #why-us .trust-grid > div:last-child {
+    border-bottom: 0;
+  }
+}
+     
